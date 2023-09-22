@@ -56,7 +56,7 @@ main {
 
 .navbar a:hover {
   background-color: orange;
-  padding: 20px 10px;
+  padding: 20px 5px;
 }
 
 /* CSS for page footer */
@@ -75,8 +75,34 @@ main {
 
 /* Homepage Styling  */
 
+.about,
 .about-image img {
-  width: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about p {
+  font-size: 20px;
+  width: 50vw;
+}
+
+.about-image img {
+  width: 20%;
   height: auto;
   margin: auto;
+}
+
+/* Portfolio Styling */
+
+.project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.project img {
+  width: 70%;
+  height: auto;
 }
