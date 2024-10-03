@@ -128,7 +128,7 @@ main {
 
 .project-details {
   display: flex;
-  background-color: var(--cg-white);
+  background-color: #189ab4;
   width: 30%;
   height: 500px;
   flex-shrink: 1;
