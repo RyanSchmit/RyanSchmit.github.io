@@ -1,39 +1,144 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>Ryan Schmitt</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
       <h1 class="logo"><a href="index.html">Ryan Schmitt</a></h1>
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a
+            class="nav-icon"
+            href="https://github.com/RyanSchmit"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="nav-icon"
+            href="https://www.linkedin.com/in/ryan-schmitt-cp/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a class="nav-icon" href="mailto:rtschmit@calpoly.edu" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </li>
       </ul>
     </nav>
     <main>
-      <h1 class="page-title">Personal Website</h1>
       <div class="about">
         <div class="about-image">
           <img src="ryan.jpg" alt="A picture of Ryan Schmitt" />
         </div>
         <div class="about-text">
-          <p>
-            Hi, my name is <strong class="neon">Ryan Schmitt</strong>. I am a
-            4th year CS major. I'm from <em>Long Island, New York</em> and I
-            like to
-            <em>surf, lift, and golf.</em>
+          <h1 class="about-name">Ryan Schmitt</h1>
+          <p class="tagline">
+            Software engineer focused on AI-powered full-stack products
           </p>
+          <p>
+            I'm a 4th-year Computer Science student at Cal Poly SLO, originally
+            from Long Island, New York. I'm drawn to problems at the intersection
+            of AI and practical tooling — particularly building systems that make
+            complex data fast to query and easy to act on.
+          </p>
+          <p>
+            My strongest skills span Python, TypeScript, React, and cloud
+            services like AWS S3, Amazon Bedrock, and OpenSearch. I've applied
+            them across internships in product management and software
+            engineering, and most recently led the cybersecurity track of a
+            team that won first place at the Digital Transformation AI Hackathon.
+          </p>
+          <p>
+            I enjoy the full arc of a product — from whiteboarding the data
+            model to shipping a clean UI. Outside of code, you'll find me
+            surfing, lifting, or on the golf course.
+          </p>
+          <p class="seeking">
+            Currently seeking new grad software engineering roles.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://github.com/RyanSchmit"
+              target="_blank"
+              rel="noopener"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+            href="https://www.linkedin.com/in/ryan-schmitt-cp/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="mailto:rtschmit@calpoly.edu" aria-label="Email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <section class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Languages</h3>
+            <div class="taglist">
+              <span class="tag">Python</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Java</span>
+              <span class="tag">SQL</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Frameworks &amp; Libraries</h3>
+            <div class="taglist">
+              <span class="tag">React</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">Firebase</span>
+            </div>
+          </div>
+          <div class="skill-category">
+            <h3>Cloud &amp; Tools</h3>
+            <div class="taglist">
+              <span class="tag">AWS S3</span>
+              <span class="tag">Amazon Bedrock</span>
+              <span class="tag">OpenSearch</span>
+              <span class="tag">Git</span>
+              <span class="tag">GitHub</span>
+              <span class="tag">Figma</span>
+              <span class="tag">Excel</span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
-      © 2023 Ryan Schmitt's Personal Website | All Rights Reserved
+      &copy; 2025&ndash;2026 Ryan Schmitt | All Rights Reserved
     </footer>
   </body>
 </html>

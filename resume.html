@@ -1,52 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Ryan Schmitt</title>
+    <title>Ryan Schmitt &mdash; Resume</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
       <h1 class="logo"><a href="index.html">Ryan Schmitt</a></h1>
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a
+            class="nav-icon"
+            href="https://github.com/RyanSchmit"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="nav-icon"
+            href="https://www.linkedin.com/in/ryan-schmitt-cp/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a class="nav-icon" href="mailto:rtschmit@calpoly.edu" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </li>
       </ul>
     </nav>
     <main>
       <h1 class="page-title">Resume</h1>
-      <a href="resume.pdf" download>Download Resume</a>
+      <div class="download-row">
+        <a class="btn" href="resume.pdf" download>
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+      </div>
       <div class="resume">
+
         <section class="section">
           <h2 class="section-title">Education</h2>
           <div class="entry">
-            <h3 class="entry-title">California Polytechnic State University</h3>
-            <p class="entry-info">Bachelor of Science in Computer Science</p>
+            <h3 class="entry-title">California Polytechnic State University &mdash; San Luis Obispo, CA</h3>
+            <p class="entry-info">Bachelor of Science in Computer Science &nbsp;|&nbsp; September 2022 &ndash; June 2026</p>
             <ul>
-              <li>Major GPA: 3.87</li>
-              <li>GPA: 3.44</li>
+              <li>Major GPA: 3.71 &nbsp;|&nbsp; Overall GPA: 3.51</li>
               <li>
-                Dean's List Winter 2023, Spring 2024, Fall 2024, Winter 2025
+                Dean's List: Winter 2023, Spring 2024, Fall 2024, Winter 2025, Fall 2025
+              </li>
+              <li>
+                Relevant Coursework: Financial Accounting, Cloud Computing,
+                Algorithms (Python), Object-Oriented Programming (Java),
+                Data Structures (Python), Intro to Computer Organization
+                (RISC-V/C), Discrete Structures
               </li>
             </ul>
           </div>
         </section>
+
         <section class="section">
           <h2 class="section-title">Experience</h2>
+
           <div class="entry">
             <h3 class="entry-title">Iconectiv</h3>
-            <p class="entry-info">Product Management Intern</p>
+            <p class="entry-info">Product Management Intern &nbsp;|&nbsp; June 2025 &ndash; September 2025</p>
             <ul class="entry-description">
               <li>
-                Designed and implemented an AI-powered solution to efficiently
-                resolve customer support issues.
+                Designed an AI-powered solution to efficiently resolve 200+
+                customer support issues.
               </li>
               <li>
-                Revised and expanded technical documentation to improve clarity
-                and usability for the current system.
+                Expanded technical documentation to improve clarity and
+                usability for the current system.
               </li>
               <li>
                 Developed an automated Excel-based tool to streamline and
@@ -54,13 +94,15 @@
               </li>
             </ul>
           </div>
+
           <div class="entry">
             <h3 class="entry-title">Digital Democracy</h3>
-            <p class="entry-info">Software Engineer Intern</p>
+            <p class="entry-info">Software Engineer Intern &nbsp;|&nbsp; January 2024 &ndash; June 2024</p>
             <ul class="entry-description">
               <li>
-                Developed an AI-driven voice recognition system to identify
-                legislators based on their speech patterns.
+                Developed an AI-powered voice recognition system to identify
+                legislators from speech patterns, significantly reducing the
+                need for manual review.
               </li>
               <li>
                 Enhanced a web scraping system in Python to improve data
@@ -72,84 +114,101 @@
               </li>
             </ul>
           </div>
+
           <div class="entry">
-            <h3 class="entry-title">The Massapequa Tutor</h3>
-            <p class="entry-info">Software Engineer Intern</p>
+            <h3 class="entry-title">Digital Transformation AI Hackathon &mdash; San Luis Obispo, CA</h3>
+            <p class="entry-info">Cybersecurity Team Lead &nbsp;|&nbsp; April 2024</p>
             <ul class="entry-description">
               <li>
-                Created a marketplace that connects tutors and students using
-                HTML, Typescript, React, Figma, CSS, Git, and GitHub
-              </li>
-              <li>Improved site's responsiveness</li>
-            </ul>
-          </div>
-          <div class="entry">
-            <h3 class="entry-title">Digital Transformation AI Hackathon </h3>
-            <p class="entry-info">Cybersecurity Team Lead</p>
-            <ul class="entry-description">
-              <li>
-                Won first place by designing and building an AI tool to quickly
-                search through a database of public records to help city clerks
-                comply with document requests
+                Led a team to develop an AI-powered document search tool,
+                winning first place.
               </li>
               <li>
-                Used AWS S3 buckets to import the data then using Amazon's
-                bedrock vectorized the data, and then finally created a vector
-                database using OpenSearch to find the documents quickly
+                Utilized AWS S3, Amazon Bedrock, and OpenSearch for fast and
+                accurate database queries.
               </li>
               <li>
-                Carefully analysis the website for possible vulnerabilities such
-                as SQL injections and side-channel attacks
+                Conducted vulnerability analysis to mitigate risks like SQL
+                injection and side-channel attacks.
+              </li>
+              <li>
+                Presented the solution to a panel of judges, highlighting the
+                technical architecture, cybersecurity features, and the
+                system's potential to streamline public service workflows.
               </li>
             </ul>
           </div>
+
         </section>
+
         <section class="section">
           <h2 class="section-title">Projects</h2>
           <div class="entry">
-            <h3 class="entry-title">Mile High Matches</h3>
-            <p class="entry-description">
-              A dating app for airports using Flutter for the user interface and
-              Firebase for database and authentication
-            </p>
+            <h3 class="entry-title">
+              Wealth Path &nbsp;&mdash;&nbsp;
+              <span style="font-weight:normal; font-size:0.9rem;">Next.js, Supabase, TypeScript</span>
+            </h3>
+            <ul class="entry-description">
+              <li>
+                Built a full-stack personal finance app with AI-powered
+                transaction categorization, reducing manual data entry.
+              </li>
+              <li>
+                Integrated an LLM to answer natural language questions about
+                spending habits and financial goals.
+              </li>
+              <li>
+                Designed a Supabase (PostgreSQL) schema with deduplication
+                logic to ensure clean transaction data.
+              </li>
+            </ul>
           </div>
+        </section>
+
+        <section class="section">
+          <h2 class="section-title">Leadership &amp; Activities</h2>
           <div class="entry">
-            <h3 class="entry-title">Arbitrage-betting</h3>
-            <p class="entry-description">
-              Scraped betting odds from different sportsbooks to find arbitrage
-              opportunities
-            </p>
+            <h3 class="entry-title">CP Security Club &mdash; San Luis Obispo, CA</h3>
+            <p class="entry-info">Social Chair &nbsp;|&nbsp; 2023 &ndash; 2025</p>
+            <ul class="entry-description">
+              <li>
+                Competed in Capture The Flag (CTF) challenges, focusing on
+                binary exploitation, reverse engineering, and network
+                vulnerabilities.
+              </li>
+              <li>
+                Explored cloud security best practices and emerging threats at
+                industry conferences like BSides.
+              </li>
+              <li>
+                Organized workshops on cybersecurity topics, including DDoS
+                mitigation and secure application development.
+              </li>
+            </ul>
           </div>
         </section>
+
         <section class="section">
-          <h2 class="section-title">Coursework</h2>
+          <h2 class="section-title">Technical Skills</h2>
           <ul>
-            <li>Design & Analysis of Algorithm</li>
-            <li>Intro to Computer Organization</li>
-            <li>Project-Based Object Oriented Programming</li>
-            <li>Data Structures</li>
-            <li>Fundamentals of Computer Science</li>
-            <li>Introduction to Computing: Community Action Computing</li>
+            <li>
+              <strong>Programming Languages:</strong> Python, Java, JavaScript,
+              TypeScript, SQL
+            </li>
+            <li>
+              <strong>Technologies:</strong> React, AWS, Firebase, GitHub,
+              Jenkins, CI/CD Pipelines
+            </li>
+            <li>
+              <strong>AI Tools:</strong> GitHub Copilot, ChatGPT, Claude Code
+            </li>
           </ul>
         </section>
-        <section class="section">
-          <h2 class="section-title">Skills</h2>
-          <ul>
-            <li>Python</li>
-            <li>Javascript</li>
-            <li>React</li>
-            <li>AWS</li>
-            <li>SQL</li>
-            <li>Java</li>
-            <li>Excel</li>
-            <li>HTML</li>
-            <li>CSS</li>
-          </ul>
-        </section>
+
       </div>
     </main>
     <footer class="footer">
-      © 2023 Ryan Schmitt's Personal Website | All Rights Reserved
+      &copy; 2025&ndash;2026 Ryan Schmitt | All Rights Reserved
     </footer>
   </body>
 </html>

@@ -1,85 +1,285 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Ryan Schmitt</title>
+    <title>Ryan Schmitt &mdash; Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
   </head>
   <body>
     <nav class="navbar">
       <h1 class="logo"><a href="index.html">Ryan Schmitt</a></h1>
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
-        <li><a href="blog.html">Blog</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a
+            class="nav-icon"
+            href="https://github.com/RyanSchmit"
+            target="_blank"
+            rel="noopener"
+            aria-label="GitHub"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            class="nav-icon"
+            href="https://www.linkedin.com/in/ryan-schmitt-cp/"
+            target="_blank"
+            rel="noopener"
+            aria-label="LinkedIn"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+        </li>
+        <li>
+          <a class="nav-icon" href="mailto:rtschmit@calpoly.edu" aria-label="Email"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </li>
       </ul>
     </nav>
     <main>
       <h1 class="page-title">Portfolio</h1>
-      <div class="project">
-        <a href="index.html">
-          <img
-            class="project-image"
-            src="recursive.png"
-            alt="Screenshot of this website"
-        /></a>
-        <div class="project-details">
-          <p class="project-name">Personal website</p>
-          <p class="project-description">
-            a website to display my past work and projects
-          </p>
-          <a href="index.html">Learn More</a>
-        </div>
-      </div>
+      <div class="projects-list">
 
-      <div class="project">
-        <a
-          target="_blank"
-          href="https://github.com/RyanSchmit/Arbitrage-betting"
-        >
-          <img
-            class="project-image"
-            src="arb.webp"
-            alt="Screenshot of arbitrage betting explanation"
-        /></a>
-        <div class="project-details">
-          <p class="project-name">Arbitrage Betting Software</p>
-          <p class="project-description">
-            gets data from different sports books to show arbitrage bets
-            available
-          </p>
-          <a
-            target="_blank"
-            href="https://github.com/RyanSchmit/Arbitrage-betting"
-            >Learn More</a
-          >
+        <!-- ── 1. Hackathon / civic-search (FEATURED) ─────────────────── -->
+        <div class="project-card featured">
+          <div class="project-card-image no-image">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <span class="featured-badge">&#127942; 1st Place</span>
+              <h2 class="project-name">Digital Transformation AI Hackathon</h2>
+            </div>
+            <p class="project-problem">
+              City clerks spend hours manually searching disparate document
+              systems to fulfill public records requests. This AI-powered search
+              tool ingests, vectorizes, and semantically queries thousands of
+              public records — reducing retrieval from minutes to seconds.
+            </p>
+            <div class="taglist">
+              <span class="tag">Python</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">AWS S3</span>
+              <span class="tag">Amazon Bedrock</span>
+              <span class="tag">OpenSearch</span>
+            </div>
+            <p class="project-meta">
+              <strong>Role:</strong> Cybersecurity Team Lead &mdash; designed the
+              security posture of the application and audited the full stack for
+              vulnerabilities. The hardest challenge was locking down the vector
+              search pipeline against SQL injection and side-channel attacks while
+              keeping query latency under 2 seconds under hackathon time pressure.
+            </p>
+            <p class="project-outcome">
+              Won 1st place out of all competing teams; the tool demonstrated a
+              complete data pipeline from S3 ingestion through Bedrock
+              vectorization to OpenSearch semantic retrieval.
+            </p>
+            <div class="project-links">
+              <a
+                class="btn"
+                href="https://github.com/RyanSchmit/civic-search"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="project">
-        <a
-          target="_blank"
-          href="https://github.com/RyanSchmit/Mile-High-Matches"
-        >
-          <img
-            class="project-image"
-            src="milehigh.png"
-            alt="Screenshot of arbitrage betting explanation"
-        /></a>
-        <div class="project-details">
-          <p class="project-name">Mile High Matches</p>
-          <p class="project-description">A dating app for the airport</p>
-          <a
-            target="_blank"
-            href="https://github.com/RyanSchmit/Mile-High-Matches"
-            >Learn More</a
-          >
+
+        <!-- ── 2. Wealth Path ─────────────────────────────────────────── -->
+        <div class="project-card">
+          <div class="project-card-image no-image">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <h2 class="project-name">Wealth Path</h2>
+            </div>
+            <p class="project-problem">
+              Managing personal finances is tedious when transactions need
+              manual categorization and there's no easy way to ask plain-English
+              questions about your spending. Wealth Path automates categorization
+              with AI and lets users query their financial data conversationally.
+            </p>
+            <div class="taglist">
+              <span class="tag">Next.js</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Supabase</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">LLM</span>
+            </div>
+            <p class="project-meta">
+              <strong>Role:</strong> Solo developer (full-stack) &mdash; the
+              hardest challenge was designing a Supabase PostgreSQL schema with
+              deduplication logic to ensure clean transaction data across
+              repeated imports, while keeping LLM query latency acceptable.
+            </p>
+            <p class="project-outcome">
+              Shipped a working finance app with AI-powered transaction
+              categorization and an LLM chat interface for natural language
+              questions about spending habits and financial goals.
+            </p>
+            <div class="project-links">
+              <a
+                class="btn"
+                href="https://github.com/RyanSchmit/Budget"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
         </div>
+
+        <!-- ── 3. Arbitrage Betting ───────────────────────────────────── -->
+        <div class="project-card">
+          <div class="project-card-image">
+            <img src="arb.webp" alt="Arbitrage betting odds dashboard" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <h2 class="project-name">Arbitrage Betting Software</h2>
+            </div>
+            <p class="project-problem">
+              Sports bettors have no fast way to identify guaranteed-profit
+              arbitrage opportunities across multiple sportsbooks in real time.
+              This tool scrapes live odds and surfaces bets where the combined
+              implied probabilities across books fall below 100%.
+            </p>
+            <div class="taglist">
+              <span class="tag">Python</span>
+              <span class="tag">Web Scraping</span>
+              <span class="tag">BeautifulSoup</span>
+            </div>
+            <p class="project-meta">
+              <strong>Role:</strong> Solo developer &mdash; the hardest challenge
+              was normalizing inconsistent odds formats (American, decimal,
+              fractional) across sportsbooks and handling rate limiting without
+              getting IP-blocked during repeated polling.
+            </p>
+            <p class="project-outcome">
+              Automated detection of arbitrage opportunities across 5+
+              sportsbooks, surfacing bets with 2&ndash;8% guaranteed return when
+              opportunities are present.
+            </p>
+            <div class="project-links">
+              <a
+                class="btn"
+                href="https://github.com/RyanSchmit/Arbitrage-betting"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 4. Mile High Matches ──────────────────────────────────── -->
+        <div class="project-card">
+          <div class="project-card-image">
+            <img src="milehigh.png" alt="Mile High Matches app screenshot" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <h2 class="project-name">Mile High Matches</h2>
+            </div>
+            <p class="project-problem">
+              Airports are high-stress, impersonal environments — there's no
+              easy way to meet other travelers with shared routes or interests.
+              Mile High Matches is a cross-platform dating app built specifically
+              for airport connections.
+            </p>
+            <div class="taglist">
+              <span class="tag">Flutter</span>
+              <span class="tag">Dart</span>
+              <span class="tag">Firebase</span>
+            </div>
+            <p class="project-meta">
+              <strong>Role:</strong> Team developer &mdash; the hardest
+              challenge was designing real-time match logic that correctly
+              fired Firebase Auth flows and Firestore listeners without race
+              conditions when two users mutually matched.
+            </p>
+            <p class="project-outcome">
+              Shipped a cross-platform mobile app with user authentication,
+              profile creation, and real-time match notifications on both iOS
+              and Android via Flutter.
+            </p>
+            <div class="project-links">
+              <a
+                class="btn"
+                href="https://github.com/RyanSchmit/Mile-High-Matches"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── 5. Personal Portfolio ─────────────────────────────────── -->
+        <div class="project-card">
+          <div class="project-card-image">
+            <img src="recursive.png" alt="Screenshot of this portfolio site" />
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-header">
+              <h2 class="project-name">Personal Portfolio</h2>
+            </div>
+            <p class="project-problem">
+              A fast, zero-dependency personal site that showcases projects and
+              work history without relying on heavy frameworks or a build
+              pipeline — deployable instantly via GitHub Pages.
+            </p>
+            <div class="taglist">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">GitHub Pages</span>
+            </div>
+            <p class="project-meta">
+              <strong>Role:</strong> Designer and developer &mdash; the core
+              challenge was achieving a clean, responsive layout and modern
+              design system from scratch without a component library or CSS
+              framework.
+            </p>
+            <p class="project-outcome">
+              Live site deployed on GitHub Pages, serving as the canonical home
+              for work history, projects, and contact information.
+            </p>
+            <div class="project-links">
+              <a class="btn" href="index.html">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site
+              </a>
+              <a
+                class="btn btn-outline"
+                href="https://github.com/RyanSchmit/RyanSchmit.github.io"
+                target="_blank"
+                rel="noopener"
+              >
+                <i class="fa-brands fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </main>
     <footer class="footer">
-      © 2023 Ryan Schmitt's Personal Website | All Rights Reserved
+      &copy; 2025&ndash;2026 Ryan Schmitt | All Rights Reserved
     </footer>
   </body>
 </html>

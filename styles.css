@@ -1,240 +1,487 @@
 :root {
-  /* variables */
   --cg-black: rgb(30, 32, 32);
   --cg-blue: rgb(36, 94, 255);
   --cg-grey: rgb(243, 243, 243);
   --cg-white: rgb(255, 255, 255);
+  --accent: #0f9b8e;
+  --bg-nav: #05445e;
+  --bg-main: #41729f;
+  --bg-card: #189ab4;
+  --text-main: #d4f1f4;
 }
+
+/* ─── Base ─────────────────────────────────────────── */
 
 html {
   height: 100%;
-  color: #d4f1f4;
+  color: var(--text-main);
 }
 
 body {
-  background: #41729f;
+  background: var(--bg-main);
   position: relative;
   min-height: 100vh;
   padding: 0;
   margin: 0;
   font-family: monospace;
+  line-height: 1.65;
 }
 
-/* CSS for navigation */
+/* ─── Navigation ────────────────────────────────────── */
 
 .navbar {
-  position: -webkit-sticky;
   position: sticky;
+  position: -webkit-sticky;
   top: 0;
   width: 100%;
-  height: 7%;
   z-index: 10;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-align: center;
-  background-color: #05445e;
+  background-color: var(--bg-nav);
   color: var(--cg-white);
-  padding: 0px 0px;
-  /* Debug border */
-  /* border: solid red; */
+  padding: 0 24px;
+  height: 60px;
+  box-sizing: border-box;
 }
 
 .nav-list {
   display: flex;
   flex-direction: row;
-  position: relative;
-  right: 30px;
+  align-items: center;
   list-style: none;
-  text-decoration: none;
-
-  /* Debug border */
-  /* border: solid blue; */
+  margin: 0;
+  padding: 0;
+  gap: 2px;
 }
 
 .navbar a {
   color: #c3e0e5;
   font-weight: bold;
-  margin: 0 12px;
+  padding: 6px 10px;
   text-decoration: none;
-  letter-spacing: 2px;
-
+  letter-spacing: 1px;
   font-family: monospace;
+  transition: color 0.2s ease;
 }
 
-.navbar a:hover {
-  color: var(--cg-blue);
-}
-
+.navbar a:hover,
 .navbar a:active {
-  color: var(--cg-blue);
+  color: var(--accent);
 }
 
 .logo a {
-  font-family: Georgia;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
 }
 
 .logo a:hover {
-  text-decoration: None;
+  color: var(--accent);
 }
 
+.nav-icon {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.15rem;
+  padding: 6px 8px;
+}
+
+/* ─── Main layout ───────────────────────────────────── */
+
 main {
-  padding: 0 20px 40px 20px;
+  padding: 2.5rem 20px 5rem 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .page-title {
-  display: flex;
-  justify-content: center;
-  font-size: 40px;
-  font-family: Georgia;
-}
-
-/* CSS for portfolio grid */
-
-.project {
-  display: flex;
-  flex-direction: row;
-  max-width: 100%;
-  margin: 1em 0 2em 0;
-
-  /* Debug border */
-  /* border: 2px solid blue; */
-}
-
-.item-link {
-  width: 70%;
-
-  /* Debug border */
-  /* border: 2px solid red; */
-}
-
-.project-image {
-  object-fit: cover;
-  width: 100%;
-  height: 500px;
-  flex-basis: 50px;
-  flex-grow: 2;
-
-  /* Debug border */
-  /* border: 2px solid black; */
-}
-
-.project-details {
-  display: flex;
-  background-color: #189ab4;
-  width: 30%;
-  height: 500px;
-  flex-shrink: 1;
-  padding: 0 20px;
-  margin: 0px;
-  line-height: 1.5;
-  overflow: scroll;
-
-  flex-direction: column;
+  font-size: 2.2rem;
+  font-family: Georgia, serif;
+  margin-bottom: 2rem;
   text-align: center;
-  justify-content: center;
-
-  /* Debug border */
-  /* border: 2px solid green; */
 }
 
-.project-details a {
-  color: var(--cg-black);
-  text-decoration: none;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.project-details a:hover {
-  color: var(--cg-blue);
-  text-decoration: underline;
-}
-
-.project-details {
-  font-weight: lighter;
-}
-
-.project-name {
-  font-weight: bold;
-  font-size: 20px;
-}
-
-/* CSS for home page */
+/* ─── Home hero / about card ────────────────────────── */
 
 .about {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  background-color: #189ab4;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-}
-
-.neon {
-  color: #fff;
-  background: 189ab4;
-  font-weight: bold;
-  text-shadow: -1px 1px 2px red, 1px 1px 2px red, 1px -1px 0 red,
-    -1px -1px 0 red, 0px 0px 15px red;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding: 2rem 2.5rem;
+  background-color: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .about-image img {
-  max-width: 300px;
-  border-radius: 3px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 260px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  display: block;
 }
 
 .about-text {
   flex: 1;
-  margin-left: 20px;
+  min-width: 0;
 }
 
-.about-text h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.about-name {
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--cg-white);
+  margin: 0 0 0.25rem 0;
+}
+
+.neon {
+  color: #fff;
+  background: #189ab4;
+  font-weight: bold;
+  text-shadow:
+    -1px  1px 2px red,
+     1px  1px 2px red,
+     1px -1px 0   red,
+    -1px -1px 0   red,
+     0px  0px 15px red;
+}
+
+.tagline {
+  font-style: italic;
+  color: var(--text-main);
+  font-size: 1rem;
+  opacity: 0.85;
+  margin: 0 0 1.25rem 0;
+  letter-spacing: 0.3px;
 }
 
 .about-text p {
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0 0 0.75rem 0;
 }
 
-/* CSS for resume page */
+.seeking {
+  color: var(--accent) !important;
+  font-weight: bold;
+  font-size: 0.9rem !important;
+  letter-spacing: 0.5px;
+  margin-top: 1rem !important;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+  margin-top: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #c3e0e5;
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: translateY(-2px);
+}
+
+/* ─── Skills section ────────────────────────────────── */
+
+.skills-section {
+  max-width: 900px;
+  width: 100%;
+  margin-top: 3rem;
+  box-sizing: border-box;
+}
+
+.skills-section h2 {
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.skill-category {
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.skill-category h3 {
+  font-family: Georgia, serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--accent);
+  margin: 0 0 0.9rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* ─── Tag list (shared) ─────────────────────────────── */
+
+.taglist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.tag {
+  background-color: rgba(5, 68, 94, 0.65);
+  color: var(--text-main);
+  padding: 4px 11px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  letter-spacing: 0.4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  white-space: nowrap;
+}
+
+/* ─── Portfolio: project cards ──────────────────────── */
+
+.projects-list {
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--bg-card);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.32);
+}
+
+.project-card.featured {
+  border-left: 4px solid var(--accent);
+}
+
+.project-card-image {
+  width: 40%;
+  flex-shrink: 0;
+  overflow: hidden;
+  min-height: 260px;
+}
+
+.project-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-card-image.no-image {
+  background: linear-gradient(135deg, #05445e 0%, #0f6682 60%, #189ab4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.project-card-body {
+  flex: 1;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  min-width: 0;
+}
+
+.project-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.15rem;
+}
+
+.featured-badge {
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 0.68rem;
+  padding: 3px 9px;
+  border-radius: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.project-name {
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--cg-white);
+  margin: 0;
+}
+
+.project-problem {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  opacity: 0.92;
+  margin: 0;
+}
+
+.project-meta {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0;
+}
+
+.project-meta strong {
+  color: var(--cg-white);
+  opacity: 1;
+}
+
+.project-outcome {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  font-style: italic;
+  margin: 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 0.75rem;
+}
+
+/* ─── Buttons ───────────────────────────────────────── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--cg-black);
+  color: var(--cg-white);
+  padding: 7px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-family: monospace;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--accent);
+  transform: translateY(-1px);
+  color: var(--cg-white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--text-main);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--cg-white);
+}
+
+/* ─── Resume page ───────────────────────────────────── */
+
+.download-row {
+  margin-bottom: 1.5rem;
+}
 
 .button {
   background-color: var(--cg-black);
   border: none;
   color: var(--cg-white);
-
   font-family: monospace;
-
   padding: 5px 7px;
   text-align: center;
-
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .button:hover {
-  background-color: var(--cg-blue);
+  background-color: var(--accent);
+}
+
+.resume {
+  max-width: 860px;
+  width: 100%;
 }
 
 .resume h2 {
-  font-family: Georgia;
+  font-family: Georgia, serif;
+  color: var(--cg-white);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
 }
 
-/* CSS for contact form */
+.resume h3 {
+  margin-bottom: 0.15rem;
+}
+
+.entry {
+  margin-bottom: 1.5rem;
+}
+
+.entry-info {
+  opacity: 0.8;
+  font-style: italic;
+  margin: 0.2rem 0 0.6rem 0;
+  font-size: 0.92rem;
+}
+
+.entry-description li,
+.resume li {
+  margin-bottom: 0.4rem;
+  line-height: 1.65;
+  font-size: 0.93rem;
+}
+
+/* ─── Contact form ──────────────────────────────────── */
 
 label {
   display: block;
   margin-bottom: 8px;
-  font-family: Georgia;
+  font-family: Georgia, serif;
   font-weight: bold;
 }
 
@@ -248,15 +495,17 @@ textarea {
   border-radius: 4px;
   font-size: 16px;
   resize: none;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.92);
+  color: #333;
 }
 
-/* Add some spacing to the form */
 form {
   width: 500px;
   margin: 0 auto;
 }
 
-/* CSS for footer */
+/* ─── Footer ────────────────────────────────────────── */
 
 .footer {
   display: flex;
@@ -268,4 +517,67 @@ form {
   bottom: 0;
   width: 100%;
   height: 2.5rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.3px;
+}
+
+/* ─── Responsive ────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 16px;
+    gap: 6px;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .about-image img {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card-image {
+    width: 100%;
+    min-height: 200px;
+  }
+
+  form {
+    width: 100%;
+  }
+
+  .projects-list,
+  .skills-section,
+  .about {
+    width: 100%;
+  }
+
+  .page-title {
+    font-size: 1.8rem;
+  }
 }
